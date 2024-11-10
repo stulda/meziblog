@@ -21,4 +21,6 @@ Vygenerování slovníku do souboru `cs.dic`:
 aspell --lang cs dump master | aspell --lang cs expand | tr ' ' '\n' > cs.dic
 ```
 
-Soubor `cs.dic` pak stačí vybrat v Jetbrains IDE v nastaveních pod položkou `Editor` -> `Spelling` -> `Dictionaries`.
+Soubor `cs.dic` pak stačí vybrat v Jetbrains IDE v nastaveních pod položkou `Editor` -> `Spelling` -> `Dictionaries`
+
+#jetbrains
