@@ -115,5 +115,3 @@ Pod hlavičkami je přidáno přesměrování, aby web byl dostupný pouze na do
 Nakonec následuje nastavení samotné **reverzní proxy**. Volba `proxy_pass` určuje na jakou IP adresu a port budou požadavky směrovány. Předtím se ještě nastavují nějaké hlavičky pomocí `proxy_set_header`, aby cílová aplikace měla informace o tom, že běží schovaná za reverzní proxy, jakou skutečnou IP adresu má klient, který si zobrazuje web, na jaké doméně aplikace běží a že komunikuje na HTTPS protokolu.
 
 Vše s tímto nastavením bezvadně funguje a bezpečnost nastavení SSL lze snadno kdykoliv otestovat díky webu [SSL Labs](https://www.ssllabs.com/ssltest/).
-
-#nginx #ssl #letsencrypt

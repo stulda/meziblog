@@ -26,5 +26,3 @@ find . -size +10M -delete
 ```
 
 Chcete-li mazané soubory během mazání také vypsat, staří přidat parametr **-print**
-
-#linux
