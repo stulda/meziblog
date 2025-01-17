@@ -39,10 +39,11 @@ DS = meziblog.cz. IN DS 57954 13 4 104d4793d0ab6d008e4da44abeccc0338198b0461693c
 
 Důležitý je řádek obsahující DNSKEY. Tento otisk klíče je potřeba vzít, vytvořit u registrátora sadu klíčů KEYSET pro naší doménu a do něj tento otisk klíče vložit. Naštěstí existuje možnost, jak vložení klíče do registru zcela automatizovat. Správce domény tuto možnost musí podporovat, ale cz.nic správce .cz domény je v tomto směru velkým průkopníkem a byli první kdo tuto možnost zavedl.
 
-Stačí jen zveřejnit DNSSEC klíč pro naší doménu pomocí CDNSKEY záznamu:
+Stačí jen zveřejnit DNSSEC klíč pro naší doménu pomocí CDNSKEY a CDS záznamu:
 
 ```shell
 pdnsutil set-publish-cdnskey meziblog.cz
+pdnsutil set-publish-cds meziblog.cz
 ```
 
 To je celé, teď už je třeba jen počkat. Nejprve si správce domény musí všimnout, že má doména CDNSKEY publikovaný, což může jeden až dva dny trvat. O nalezení záznamu bude majitel a administrátor domény informován emailem. Po týdnu, pokud CDNSKEY v zóně zůstane, správce domény přidá automatický KEYSET k doméně s naším otiskem klíče a je hotovo, doména je zabezpečena pomocí DNSSEC.
