@@ -55,7 +55,7 @@ Na závěr ještě drobný dodatek. Je vhodné používat místo původních NSE
 PowerDNS nastavuje NSEC3 záznamy tímto příkazem:
 
 ```shell
-pdnsutil set-nsec3 meziblog.cz '1 0 1 ab'
+pdnsutil set-nsec3 meziblog.cz '1 0 0 -'
 ```
 
 Následně stačí provést přeuspořádání záznamů v zóně a navýšení sériového čísla zóny, aby se o změnách dozvěděly slave DNS servery:
