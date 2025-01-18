@@ -49,7 +49,7 @@ certbot_dns_powerdns:dns_powerdns_api_key = <náhodný a dostatečně dlouhý kl
 Nakonec již samotné získání certifikátu:
 
 ```shell
-certbot certonly -d domena.cz -d *.domena.cz --authenticator certbot-dns-powerdns:dns-powerdns --certbot-dns-powerdns:dns-powerdns-credentials /etc/letsencrypt/pdns-credentials.ini
+certbot certonly -d domena.cz -d *.domena.cz --authenticator dns-powerdns --dns-powerdns-credentials /etc/letsencrypt/pdns-credentials.ini
 ```
 
 Tento poměrně dlouhý příkaz Certbotu řekne, že má pouze vystavit certifikát a nedělat nic jiného pro domena.cz a *.domena.cz a že ověření má provést pomocí PowerDNS pluginu s informací, kde najde konfigurační soubor s PowerDNS API nastavením.
